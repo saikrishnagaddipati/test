@@ -1,6 +1,8 @@
 class PetsController < ApplicationController
   def new
+  # instance variables for pet_types
     @pet_types = Pet.pet_types
+    # instance variables for customers
     @customers = Person.customers
   end
 
