@@ -1,0 +1,16 @@
+<h1>Appointments for customer</h1>
+<table class='simple_table'>
+  <tr>
+    <td class='simple_table'>Pet name</td>
+    <td class='simple_table'>Date of next appointment</td>
+    <td class='simple_table'>Reason for visit</td>
+  </tr>
+  
+  <% @appointments.each do |appointment| %>
+    <tr>
+      <td class='simple_table'><%= appointment.pet.name %></td>
+      <td class='simple_table'><%= appointment.date_of_visit.strftime("%m/%d/%Y") %></td>
+      <td class='simple_table'><%= appointment.reason_for_visit %></td>
+    </tr>
+  <% end %>
+</table>

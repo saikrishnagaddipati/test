@@ -1,0 +1,34 @@
+<h1>Create a new pet</h1>
+
+
+<form method='post' action='/pets' >
+  Customer:
+  <select name='customer'>
+    <% @customers.each do |customer| %>
+      <option value="<%= customer.id %>"><%= customer.name %></option>
+    <% end %>
+  </select>
+
+  <br/>
+
+  Name: <input type='text' name='name' id='name' /><br/>
+
+  Type:
+  <select name='pet_type'>
+    <% @pet_types.each do |pet_type| %>
+      <option value="<%= pet_type.downcase %>"><%= pet_type %></option>
+    <% end %>
+  </select>
+
+  <br/>
+
+  Breed: <input type='text' name='breed' id='breed' /><br/>
+
+  Age: <input type='' name='age' id='age' /><br/>
+
+  Weight: <input type='text' name='weight' id='weight' /><br/>
+
+  Date of Last Visit (YYYY/MM/dd): <input type='text' name='last_visit' id='last_visit' /><br/>
+
+  <input type='submit' value='Save'/>
+</form>

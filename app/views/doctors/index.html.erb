@@ -1,0 +1,26 @@
+<h1>Doctor list</h1>
+
+<table class='simple_table'>
+  <tr>
+    <td class='simple_table'>Name</td>
+    <td class='simple_table'>Street</td>
+    <td class='simple_table'>City</td>
+    <td class='simple_table'>State</td>
+    <td class='simple_table'>Zip</td>
+    <td class='simple_table'>Degree from school</td>
+    <td class='simple_table'>Year in practice</td>
+  </tr>
+  
+  <% @doctors.each do |doctor| %>
+    <tr>
+      <td class='simple_table'><%= doctor.name %></td>
+      <td class='simple_table'><%= doctor.street %></td>
+      <td class='simple_table'><%= doctor.city %></td>
+      <td class='simple_table'><%= doctor.state %></td>
+      <td class='simple_table'><%= doctor.zip %></td>
+      <td class='simple_table'><%= doctor.degree_from_school %></td>
+      <td class='simple_table'><%= doctor.years_in_practice %></td>
+    </tr>
+  <% end %>
+</table>
+

@@ -1,0 +1,20 @@
+<h1>Create a new appointment</h1>
+
+<form method='post' action='/appointments' >
+  Date of Visit (YYYY/MM/dd): <input type='text' name='date_of_visit' id='date_of_visit' /><br/>
+
+  Pet:
+  <select name='pet'>
+    <% @pets.each do |pet| %>
+      <option value="<%= pet.id %>"><%= "Pet name: #{pet.name} -- Customer: #{pet.customer_name}" %></option>
+    <% end %>
+  </select>
+
+  <br/>
+
+  Requires reminder: <input type='checkbox' name='reminder_required' id='reminder_required' /><br/>
+
+  Reason for visit: <input type='text' name='reason_for_visit' id='reason_for_visit' /><br/>
+
+  <input type='submit' value='Save'/>
+</form>
