@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
   def new
+    #instance variable is created
     @pets = Pet.includes(:customer).all
   end
 
